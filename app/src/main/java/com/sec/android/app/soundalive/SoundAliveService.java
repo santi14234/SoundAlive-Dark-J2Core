@@ -29,7 +29,7 @@ public class SoundAliveService extends Service {
     public void onCreate() {
         super.onCreate();
         startForegroundNotification();
-        attachSession(0); // Vincula la sesión global del sistema
+        attachSession(0);
     }
 
     @Override
@@ -85,7 +85,6 @@ public class SoundAliveService extends Service {
         boolean isConcert = prefs.getBoolean("concert_on", false);
         boolean isTube = prefs.getBoolean("tube_on", false);
 
-        // 1. Aplicar niveles del Ecualizador (7 Bandas)
         for (Equalizer eq : mEqualizers.values()) {
             if (eq == null) continue;
             try {
@@ -96,7 +95,6 @@ public class SoundAliveService extends Service {
                 for (short i = 0; i < 7 && i < numBands; i++) {
                     int milliBels = prefs.getInt("band_" + i, 0);
 
-                    // Calidez analógica simulando el Tube Amp Pro
                     if (isTube) {
                         if (i <= 1) milliBels = Math.min(milliBels + 450, maxEQ);
                         if (i >= 5) milliBels = Math.max(milliBels - 350, minEQ);
@@ -107,7 +105,6 @@ public class SoundAliveService extends Service {
             } catch (Exception ignored) {}
         }
 
-        // 2. Aplicar Surround 3D
         for (Virtualizer virt : mVirtualizers.values()) {
             if (virt == null) continue;
             try {
@@ -118,16 +115,14 @@ public class SoundAliveService extends Service {
             } catch (Exception ignored) {}
         }
 
-        // 3. Aplicar Concert Hall
         for (PresetReverb reverb : mReverbs.values()) {
             if (reverb == null) continue;
             try {
-                reverb.setPreset(isConcert ? PresetReverb.PRESET_CONCERTHALL : PresetReverb.PRESET_NONE);
+                reverb.setPreset(isConcert ? PresetReverb.PRESET_LARGEHALL : PresetReverb.PRESET_NONE);
                 reverb.setEnabled(isConcert);
             } catch (Exception ignored) {}
         }
 
-        // 4. Refuerzo de graves extra para Tube Amp Pro
         for (BassBoost bass : mBassBoosts.values()) {
             if (bass == null) continue;
             try {
