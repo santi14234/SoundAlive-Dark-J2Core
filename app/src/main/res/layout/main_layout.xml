@@ -10,26 +10,43 @@
         android:orientation="vertical"
         android:padding="20dp">
 
-        <!-- Encabezado Estilo One UI Dark -->
-        <TextView
-            android:layout_width="wrap_content"
+        <!-- Encabezado con Insignia UHQ / Dolby -->
+        <RelativeLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Calidad y efectos de sonido"
-            android:textColor="#FFFFFF"
-            android:textSize="22sp"
-            android:textStyle="bold"
-            android:layout_marginBottom="2dp" />
+            android:layout_marginBottom="20dp">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="SoundAlive Dark Edition"
-            android:textColor="#3897F0"
-            android:textSize="13sp"
-            android:textStyle="bold"
-            android:layout_marginBottom="24dp" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
-        <!-- Tarjeta 1: Ecualizador de 7 Bandas con fondo original -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Calidad y efectos de sonido"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SoundAlive Dark Edition"
+                    android:textColor="#3897F0"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/icon_p_small" />
+        </RelativeLayout>
+
+        <!-- Tarjeta 1: Ecualizador de 7 Bandas con fondo original SoundAlive -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -105,7 +122,7 @@
                     android:textSize="9sp" />
             </RelativeLayout>
 
-            <!-- Rejilla con las 7 Bandas del Ecualizador -->
+            <!-- Rejilla con las 7 Bandas -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="190dp"
@@ -113,37 +130,37 @@
                 android:orientation="horizontal">
 
                 <LinearLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:gravity="center" android:orientation="vertical">
-                    <SeekBar android:id="@+id/band_60" android:layout_width="140dp" android:layout_height="wrap_content" android:rotation="270" />
+                    <SeekBar android:id="@+id/band_60" android:layout_width="140dp" android:layout_height="wrap_content" android:rotation="270" android:thumb="@drawable/custom_thumb" />
                     <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="60" android:textColor="#B0B0B0" android:textSize="11sp" />
                 </LinearLayout>
 
                 <LinearLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:gravity="center" android:orientation="vertical">
-                    <SeekBar android:id="@+id/band_150" android:layout_width="140dp" android:layout_height="wrap_content" android:rotation="270" />
+                    <SeekBar android:id="@+id/band_150" android:layout_width="140dp" android:layout_height="wrap_content" android:rotation="270" android:thumb="@drawable/custom_thumb" />
                     <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="150" android:textColor="#B0B0B0" android:textSize="11sp" />
                 </LinearLayout>
 
                 <LinearLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:gravity="center" android:orientation="vertical">
-                    <SeekBar android:id="@+id/band_400" android:layout_width="140dp" android:layout_height="wrap_content" android:rotation="270" />
+                    <SeekBar android:id="@+id/band_400" android:layout_width="140dp" android:layout_height="wrap_content" android:rotation="270" android:thumb="@drawable/custom_thumb" />
                     <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="400" android:textColor="#B0B0B0" android:textSize="11sp" />
                 </LinearLayout>
 
                 <LinearLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:gravity="center" android:orientation="vertical">
-                    <SeekBar android:id="@+id/band_1k" android:layout_width="140dp" android:layout_height="wrap_content" android:rotation="270" />
+                    <SeekBar android:id="@+id/band_1k" android:layout_width="140dp" android:layout_height="wrap_content" android:rotation="270" android:thumb="@drawable/custom_thumb" />
                     <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="1k" android:textColor="#B0B0B0" android:textSize="11sp" />
                 </LinearLayout>
 
                 <LinearLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:gravity="center" android:orientation="vertical">
-                    <SeekBar android:id="@+id/band_3k" android:layout_width="140dp" android:layout_height="wrap_content" android:rotation="270" />
+                    <SeekBar android:id="@+id/band_3k" android:layout_width="140dp" android:layout_height="wrap_content" android:rotation="270" android:thumb="@drawable/custom_thumb" />
                     <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="3k" android:textColor="#B0B0B0" android:textSize="11sp" />
                 </LinearLayout>
 
                 <LinearLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:gravity="center" android:orientation="vertical">
-                    <SeekBar android:id="@+id/band_8k" android:layout_width="140dp" android:layout_height="wrap_content" android:rotation="270" />
+                    <SeekBar android:id="@+id/band_8k" android:layout_width="140dp" android:layout_height="wrap_content" android:rotation="270" android:thumb="@drawable/custom_thumb" />
                     <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="8k" android:textColor="#B0B0B0" android:textSize="11sp" />
                 </LinearLayout>
 
                 <LinearLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:gravity="center" android:orientation="vertical">
-                    <SeekBar android:id="@+id/band_16k" android:layout_width="140dp" android:layout_height="wrap_content" android:rotation="270" />
+                    <SeekBar android:id="@+id/band_16k" android:layout_width="140dp" android:layout_height="wrap_content" android:rotation="270" android:thumb="@drawable/custom_thumb" />
                     <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="16k" android:textColor="#B0B0B0" android:textSize="11sp" />
                 </LinearLayout>
 
@@ -304,6 +321,15 @@
             </RelativeLayout>
 
         </LinearLayout>
+
+        <!-- Pie de página con Logo Dolby -->
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="24dp"
+            android:src="@drawable/dolby_logo"
+            android:tint="#555555" />
 
     </LinearLayout>
 </ScrollView>
