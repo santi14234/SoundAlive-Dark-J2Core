@@ -43,18 +43,32 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp">
 
-                <TextView
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="ECUALIZADOR"
-                    android:textColor="#8E8E93"
-                    android:textSize="11sp"
-                    android:textStyle="bold" />
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/ic_equalizer" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ECUALIZADOR"
+                        android:textColor="#8E8E93"
+                        android:textSize="11sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
                     android:text="PERSONALIZADO"
                     android:textColor="#3897F0"
                     android:textSize="11sp"
@@ -98,43 +112,36 @@
                 android:gravity="center"
                 android:orientation="horizontal">
 
-                <!-- 60 Hz -->
                 <LinearLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:gravity="center" android:orientation="vertical">
                     <SeekBar android:id="@+id/band_60" android:layout_width="140dp" android:layout_height="wrap_content" android:rotation="270" />
                     <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="60" android:textColor="#B0B0B0" android:textSize="11sp" />
                 </LinearLayout>
 
-                <!-- 150 Hz -->
                 <LinearLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:gravity="center" android:orientation="vertical">
                     <SeekBar android:id="@+id/band_150" android:layout_width="140dp" android:layout_height="wrap_content" android:rotation="270" />
                     <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="150" android:textColor="#B0B0B0" android:textSize="11sp" />
                 </LinearLayout>
 
-                <!-- 400 Hz -->
                 <LinearLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:gravity="center" android:orientation="vertical">
                     <SeekBar android:id="@+id/band_400" android:layout_width="140dp" android:layout_height="wrap_content" android:rotation="270" />
                     <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="400" android:textColor="#B0B0B0" android:textSize="11sp" />
                 </LinearLayout>
 
-                <!-- 1k Hz -->
                 <LinearLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:gravity="center" android:orientation="vertical">
                     <SeekBar android:id="@+id/band_1k" android:layout_width="140dp" android:layout_height="wrap_content" android:rotation="270" />
                     <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="1k" android:textColor="#B0B0B0" android:textSize="11sp" />
                 </LinearLayout>
 
-                <!-- 3k Hz -->
                 <LinearLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:gravity="center" android:orientation="vertical">
                     <SeekBar android:id="@+id/band_3k" android:layout_width="140dp" android:layout_height="wrap_content" android:rotation="270" />
                     <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="3k" android:textColor="#B0B0B0" android:textSize="11sp" />
                 </LinearLayout>
 
-                <!-- 8k Hz -->
                 <LinearLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:gravity="center" android:orientation="vertical">
                     <SeekBar android:id="@+id/band_8k" android:layout_width="140dp" android:layout_height="wrap_content" android:rotation="270" />
                     <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="8k" android:textColor="#B0B0B0" android:textSize="11sp" />
                 </LinearLayout>
 
-                <!-- 16k Hz -->
                 <LinearLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:gravity="center" android:orientation="vertical">
                     <SeekBar android:id="@+id/band_16k" android:layout_width="140dp" android:layout_height="wrap_content" android:rotation="270" />
                     <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="16k" android:textColor="#B0B0B0" android:textSize="11sp" />
@@ -166,10 +173,19 @@
                 android:layout_height="wrap_content"
                 android:paddingVertical="10dp">
 
+                <ImageView
+                    android:id="@+id/img_surround"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="12dp"
+                    android:src="@drawable/ic_surround" />
+
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
+                    android:layout_toEndOf="@id/img_surround"
                     android:layout_toStartOf="@id/switch_surround">
 
                     <TextView
@@ -203,10 +219,19 @@
                 android:layout_height="wrap_content"
                 android:paddingVertical="10dp">
 
+                <ImageView
+                    android:id="@+id/img_tube"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="12dp"
+                    android:src="@drawable/ic_tube" />
+
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
+                    android:layout_toEndOf="@id/img_tube"
                     android:layout_toStartOf="@id/switch_tube">
 
                     <TextView
@@ -240,10 +265,19 @@
                 android:layout_height="wrap_content"
                 android:paddingVertical="10dp">
 
+                <ImageView
+                    android:id="@+id/img_concert"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="12dp"
+                    android:src="@drawable/ic_concert" />
+
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
+                    android:layout_toEndOf="@id/img_concert"
                     android:layout_toStartOf="@id/switch_concert">
 
                     <TextView
