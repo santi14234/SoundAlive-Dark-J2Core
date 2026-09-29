@@ -16,24 +16,24 @@
             android:layout_height="wrap_content"
             android:text="Calidad y efectos de sonido"
             android:textColor="#FFFFFF"
-            android:textSize="20sp"
+            android:textSize="22sp"
             android:textStyle="bold"
-            android:layout_marginBottom="4dp" />
+            android:layout_marginBottom="2dp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="SoundAlive Dark Edition"
             android:textColor="#3897F0"
-            android:textSize="12sp"
+            android:textSize="13sp"
             android:textStyle="bold"
             android:layout_marginBottom="24dp" />
 
-        <!-- Tarjeta 1: Ecualizador de 7 Bandas -->
+        <!-- Tarjeta 1: Ecualizador de 7 Bandas con fondo original -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#1E1E1E"
+            android:background="@drawable/sound_alive_card_bg_custome_desktop"
             android:orientation="vertical"
             android:padding="18dp"
             android:layout_marginBottom="20dp">
@@ -150,11 +150,11 @@
             </LinearLayout>
         </LinearLayout>
 
-        <!-- Tarjeta 2: Efectos Avanzados SoundAlive -->
+        <!-- Tarjeta 2: Efectos Avanzados con fondo original -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#1E1E1E"
+            android:background="@drawable/sound_alive_card_bg_custome_desktop"
             android:orientation="vertical"
             android:padding="18dp">
 
